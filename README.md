@@ -68,7 +68,7 @@ Start the application using [Angular CLI](https://github.com/angular/angular-cli
 ng serve -o
 ```
 
-The application should open in your default browser displaying: `Demystifying Angular (Reactive) Forms at DevCamp!` 
+The application should open in your default browser displaying a header containing: `Demystifying Angular (Reactive) Forms` 
 
 ### How did I generate this project using [Angular CLI](https://github.com/angular/angular-cli)?
 ```
