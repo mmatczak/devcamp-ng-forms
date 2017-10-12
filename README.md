@@ -1,27 +1,81 @@
-# DevCampNgForms
+## Getting started
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.6.
+### Install prerequisites
 
-## Development server
+#### Git
+Check if you have a Git client already installed:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+git --version
+```
 
-## Code scaffolding
+If your OS can not recognize this command, install Git. For details please refer to [this page](http://git-scm.com).
+When installing under Windows, please make sure you check the following option:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Use git from Windows command prompt
 
-## Build
+#### Node.js
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+[Angular CLI](https://github.com/angular/angular-cli) requires [Node.js](https://nodejs.org/) 6.9.0 or higher. 
 
-## Running unit tests
+It is highly recommended to install the [Node Version Manager](https://github.com/creationix/nvm) which manages multiple active
+[Node.js](https://nodejs.org/) versions on your machine. The latest windows version of nvm can be downloaded [here](https://github.com/coreybutler/nvm-windows/releases/download/1.1.6/nvm-setup.zip).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Having the [Node Version Manager](https://github.com/creationix/nvm) installed, install Node.js, e.g. `6.10.2`:
 
-## Running end-to-end tests
+```
+nvm install 6.10.2
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+and set it to be used:
 
-## Further help
+```
+nvm use 6.10.2
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### npm
+
+Having the Node.js installed you have also its package manager - [npm](https://www.npmjs.com/) installed, but we need its version 5 or higher, e.g. `5.3.0`:
+
+```
+npm install -g npm@5.3.0
+```
+
+#### Angular CLI
+
+Having [npm](https://www.npmjs.com/) installed you can install [Angular CLI](https://github.com/angular/angular-cli) like this:
+
+```
+npm install -g @angular/cli
+```
+
+### Clone, install dependencies and run
+
+Clone this repository:
+```
+https://github.com/mmatczak/devcamp-ng-forms.git
+```
+
+Install dependencies using [npm](https://www.npmjs.com/):
+```
+cd devcamp-ng-forms
+npm install
+```
+This may take several minutes...
+
+Start the application using [Angular CLI](https://github.com/angular/angular-cli):
+```
+ng serve -o
+```
+
+The application should open in your default browser displaying: `Demystifying Angular (Reactive) Forms at DevCamp!` 
+
+### How did I generate this project using [Angular CLI](https://github.com/angular/angular-cli)?
+```
+mkdir devcamp-ng-forms
+ng new dev-camp-ng-forms --prefix=dc --style=scss --skip-install --directory=devcamp-ng-forms
+cd devcamp-ng-forms
+npm install
+```
+
+
