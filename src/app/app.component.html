@@ -3,23 +3,14 @@
 <form [formGroup]="form" (submit)="send()" novalidate>
   <mat-form-field>
     <input matInput placeholder="Name" formControlName="name">
-    <mat-error *ngIf="form.get('name').hasError('required')">
-      Please provide a value
-    </mat-error>
-    <mat-error *ngIf="form.get('name').hasError('startsWithM')">
-      Please provide a name starting with 'M'
+    <mat-error>
+      <dc-validation-errors [control]="form.get('name')"></dc-validation-errors>
     </mat-error>
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="Email" formControlName="email">
-    <mat-error *ngIf="form.get('email').hasError('required')">
-      Please provide a value
-    </mat-error>
-    <mat-error *ngIf="form.get('email').hasError('email')">
-      Please provide a correct email
-    </mat-error>
-    <mat-error *ngIf="form.get('email').hasError('emailAlreadyUsed')">
-      Hmmm... Already registered?
+    <mat-error>
+      <dc-validation-errors [control]="form.get('email')"></dc-validation-errors>
     </mat-error>
   </mat-form-field>
 
